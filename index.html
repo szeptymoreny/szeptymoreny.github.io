@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szepty Moreny · Kawa, szept i myśli</title>
+    <meta property="og:image" content="https://morenapoems-debug.github.io/SzeptyMoreny/og-image.jpg">
+    <meta property="og:title" content="Szepty Moreny · Kawa, szept i myśli">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-card: rgba(14, 23, 26, 0.90);        
+            --accent-gold: #f3e5ab;                    
+            --accent-gold-deep: #d4af37;               
+            --text-main: #f0eae1;                      
+            --text-muted: #c5b9a8;                     
+            --border-color: rgba(212, 175, 55, 0.35);  
+        }
+
+        body {
+            background: linear-gradient(rgba(11, 18, 20, 0.85), rgba(11, 18, 20, 0.92)), url('tlo.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+            letter-spacing: 0.02em;
+        }
+
+        header {
+            text-align: center;
+            padding: 90px 20px;
+            border-bottom: 1px solid var(--border-color);
+            background: linear-gradient(rgba(11, 18, 20, 0.70), rgba(11, 18, 20, 0.82)), url('naglowek-tlo.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        h1, .subtitle {
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+            background: linear-gradient(135deg, #fff2cc 0%, #d4af37 50%, #aa7c11 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 15px rgba(212, 175, 55, 0.25);
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .coffee-cup-graphic {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            vertical-align: middle;
+            filter: drop-shadow(0 2px 8px rgba(212,175,55,0.4));
+        }
+
+        .steam-lines {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 2px;
+            height: 12px;
+        }
+
+        .steam-lines span {
+            display: block;
+            width: 2px;
+            background: linear-gradient(to top, var(--accent-gold), transparent);
+            border-radius: 2px;
+            animation: riseSteam 2s ease-in-out infinite;
+        }
+
+        .steam-lines span:nth-child(1) { animation-delay: 0s; height: 10px; }
+        .steam-lines span:nth-child(2) { animation-delay: 0.6s; height: 14px; }
+        .steam-lines span:nth-child(3) { animation-delay: 0.3s; height: 8px; }
+
+        @keyframes riseSteam {
+            0% { transform: translateY(4px) scaleX(1); opacity: 0.2; }
+            50% { opacity: 0.8; }
+            100% { transform: translateY(-4px) scaleX(1.4); opacity: 0; }
+        }
+
+        .cup-body {
+            width: 32px;
+            height: 22px;
+            border: 2px solid var(--accent-gold-deep);
+            border-top: none;
+            border-radius: 0 0 14px 14px;
+            position: relative;
+            background: rgba(212, 175, 55, 0.15);
+        }
+
+        .cup-body::after {
+            content: '';
+            position: absolute;
+            right: -9px;
+            top: 3px;
+            width: 7px;
+            height: 11px;
+            border: 2px solid var(--accent-gold);
+            border-left: none;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: var(--text-muted);
+            font-size: 1.25rem;
+            letter-spacing: 0.05em;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding: 20px;
+            background: rgba(8, 13, 15, 0.92);
+            border-bottom: 1px solid var(--border-color);
+            flex-wrap: wrap;
+            backdrop-filter: blur(5px);
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent-gold);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+            backdrop-filter: blur(8px);
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--accent-gold);
+            font-size: 1.8rem;
+            margin-top: 0;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            font-weight: 400;
+        }
+
+        p {
+            color: var(--text-main);
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        .content-image {
+            width: 100%;
+            max-height: 480px;
+            object-fit: cover;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            margin: 20px 0 15px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .photo-quote {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: var(--accent-gold);
+            text-align: center;
+            font-size: 1.05rem;
+            margin-top: 15px;
+            letter-spacing: 0.03em;
+        }
+
+       .coffee-support-box {
+            text-align: center;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, rgba(14, 23, 26, 0.95) 100%);
+            border: 1px solid var(--accent-gold-deep);
+            padding: 30px 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-sizing: border-box;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .coffee-btn {
+            display: inline-block;
+            margin: 15px 0 0 0;
+            background: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%);
+            color: #0b1214;
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .coffee-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+        }
+
+        .whispers-box {
+            background: rgba(8, 13, 15, 0.6);
+            border: 1px dashed var(--border-color);
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 15px;
+            font-style: italic;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .section-icon {
+            display: inline-block;
+            margin-right: 8px;
+            color: var(--accent-gold);
+        }
+
+      .vinyl-player-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: rgba(8, 13, 15, 0.7);
+            border: 1px dashed var(--border-color);
+            padding: 20px 10px;
+            border-radius: 8px;
+            margin-top: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .turntable {
+            position: relative;
+            width: 160px;
+            height: 160px;
+            margin: 0 0 20px 0;
+            background: #111;
+            border-radius: 50%;
+            border: 4px solid var(--accent-gold-deep);
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        ..vinyl-record {
+            width: 220px;
+            height: 220px;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 50%;
+            background: repeating-radial-gradient(#111, #111 4px, #222 5px, #111 6px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .vinyl-label {
+            width: 65px;
+            height: 65px;
+            background: var(--bg-card);
+            border: 2px solid var(--accent-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 0.6rem;
+            color: var(--accent-gold);
+            text-align: center;
+        }
+
+        .rotating {
+            animation: spin 3s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .track-info {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1rem;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+            min-height: 30px;
+            letter-spacing: 0.5px;
+        }
+
+        .radio-controls {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .radio-btn {
+            background: transparent;
+            color: var(--accent-gold);
+            border: 1px solid var(--accent-gold-deep);
+            padding: 8px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .radio-btn:hover {
+            background: var(--accent-gold-deep);
+            color: #0b1214;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            background: rgba(8, 13, 15, 0.95);
+        }
+
+        .visitor-counter {
+            margin-top: 12px;
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            color: var(--accent-gold);
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Szepty Moreny 
+            <span class="coffee-cup-graphic">
+                <span class="steam-lines">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <span class="cup-body"></span>
+            </span>
+        </h1>
+        <div class="subtitle">kawa, szept i jesienne myśli</div>
+    </header>
+
+    <nav>
+        <a href="#cisza">Witaj w mojej ciszy</a>
+        <a href="#mysli">Kawa, szept i myśli</a>
+        <a href="#chwila">Na dłuższą chwilę...</a>
+        <a href="#radio">Radio Szepty Moreny</a>
+        <a href="#szepty">Twoje Szepty</a>
+        <a href="#kawa">Napij się ze mną kawy</a>
+    </nav>
+
+    <div class="container" style="padding-top: 40px;">
+        
+        <div class="card" id="cisza">
+            <h2>Witaj w mojej ciszy</h2>
+            <p>Przestrzeń tworzona z ciszy, pary unoszącej się nad filiżanką kawy i nieopowiedzianych historii.<br> Znajdziesz tu kadry zatrzymane w czasie, wiersze i refleksje...</p>
+            <img src="portret.jpg" alt="Szepty Moreny - portret" class="content-image">
+            <div class="photo-quote">
+                Są słowa, które brzmią najgłośniej wtedy, gdy nikt ich na głos nie wypowiada.
+            </div>
+        </div>
+
+        <div class="card" id="mysli">
+    <h2>Kawa, szept i myśli</h2>
+    
+  <!-- SEKCJA ZAKŁADEK I KATEGORII WIERSZY -->
+    
+    <!-- Przyciski filtrów (autorskie kategorie) -->
+    <div style="text-align: center; margin-bottom: 40px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+        <button class="poem-tab active-tab" onclick="filterPoems('all', this)" style="background: var(--accent-gold); color: #111; border: 1px solid var(--accent-gold); padding: 8px 18px; font-family: inherit; font-size: 0.85rem; cursor: pointer; letter-spacing: 1px; transition: all 0.3s;">Wszystkie</button>
+        <button class="poem-tab" onclick="filterPoems('cienie', this)" style="background: transparent; color: var(--accent-gold); border: 1px solid var(--accent-gold); padding: 8px 18px; font-family: inherit; font-size: 0.85rem; cursor: pointer; letter-spacing: 1px; transition: all 0.3s;">Cienie codzienności</button>
+        <button class="poem-tab" onclick="filterPoems('niedomowienia', this)" style="background: transparent; color: var(--accent-gold); border: 1px solid var(--accent-gold); padding: 8px 18px; font-family: inherit; font-size: 0.85rem; cursor: pointer; letter-spacing: 1px; transition: all 0.3s;">Niedomówienia</button>
+        <button class="poem-tab" onclick="filterPoems('czas', this)" style="background: transparent; color: var(--accent-gold); border: 1px solid var(--accent-gold); padding: 8px 18px; font-family: inherit; font-size: 0.85rem; cursor: pointer; letter-spacing: 1px; transition: all 0.3s;">Czas i pamięć</button>
+        <button class="poem-tab" onclick="filterPoems('pragnienia', this)" style="background: transparent; color: var(--accent-gold); border: 1px solid var(--accent-gold); padding: 8px 18px; font-family: inherit; font-size: 0.85rem; cursor: pointer; letter-spacing: 1px; transition: all 0.3s;">Nocne pragnienia</button>
+        <button class="poem-tab" onclick="filterPoems('cisza', this)" style="background: transparent; color: var(--accent-gold); border: 1px solid var(--accent-gold); padding: 8px 18px; font-family: inherit; font-size: 0.85rem; cursor: pointer; letter-spacing: 1px; transition: all 0.3s;">Cisza i próba</button>
+    </div>
+
+    <!-- KONTENER NA WIERSZE -->
+    <div id="poems-container">
+
+        <!-- ===== 1. CIENIE CODZIENNOŚCI ===== -->
+
+        <!-- Bez powodu -->
+        <div class="poem-item" data-category="cienie" style="display: none;">
+            <p style="text-align: center; font-style: italic; color: var(--accent-gold); margin-bottom: 30px; line-height: 1.8;">
+                <strong>„Bez powodu”</strong><br><br>
+                Nie wszystko<br>musi mieć powód.<br><br>
+                Niektóre rzeczy<br>po prostu się zdarzają.<br><br>
+                Śmiejesz się<br>w zupełnie nieodpowiednim momencie.<br><br>
+                Wybierasz inną drogę.<br><br>
+                Otwierasz wiadomość<br>dokładnie wtedy,<br>kiedy o kimś myślisz.<br><br>
+                I przez chwilę<br>masz wrażenie,<br>że życie<br>mrugnęło do Ciebie.<br><br>
+                Nie pytaj.<br><br>
+                Niektóre drobiazgi<br>ładniej wyglądają<br>bez wyjaśnienia.
+            </p>
+            <div style="text-align: center; color: rgba(255,255,255,0.2); margin: 30px 0; font-size: 0.9rem;">✦ ✦ ✦</div>
+        </div>
+
+        <!-- Drobna zmiana -->
+        <div class="poem-item" data-category="cienie" style="display: none;">
+            <p style="text-align: center; font-style: italic; color: var(--accent-gold); margin-bottom: 30px; line-height: 1.8;">
+                <strong>„Drobna zmiana”</strong><br><br>
+                Wystarczy przestawić jeden mebel, zmienić trasę do domu, kupić coś, czego nigdy wcześniej nie wybieraliśmy.<br><br>
+                Nic wielkiego.<br><br>
+                A jednak nagle pokój wygląda inaczej, droga trwa krócej, a dzień ma jakiś nowy szczegół.<br><br>
+                Może życie też nie zawsze potrzebuje wielkiej zmiany.<br><br>
+                Czasami wystarczy przesunąć jedną rzecz i zobaczyć, co było za nią.
+            </p>
+            <div style="text-align: center; color: rgba(255,255,255,0.2); margin: 30px 0; font-size: 0.9rem;">✦ ✦ ✦</div>
+        </div>
+
+        <!-- Prawie nic -->
+        <div class="poem-item" data-category="cienie" style="display: none;">
+            <p style="text-align: center; font-style: italic; color: var(--accent-gold); margin-bottom: 40px; line-height: 1.8;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 10px;">„Prawie nic”</strong>
+                Najciekniejsze rzeczy często zaczynają się od prawie nic.<br>
+                Jednego zdania. Jednego spojrzenia. Decyzji podjętej bez większego namysłu.<br>
+                Mijają lata i okazuje się, że właśnie ten drobiazg miał swoje dalsze strony.<br>
+                Tylko wtedy jeszcze o nich nie wiedzieliśmy.
+            </p>
+            <div style="text-align: center; color: rgba(255,255,255,0.2); margin: 30px 0; font-size: 0.9rem;">✦ ✦ ✦</div>
+        </div>
+
+        <!-- Miłe złego początki -->
+        <div class="poem-item" data-category="cienie" style="display: none;">
+            <p style="text-align: center; font-style: italic; color: var(--accent-gold); margin-bottom: 40px; line-height: 1.8;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 10px;">„Miłe złego początki”</strong>
+                Miał być spokojny dzień. Był. Przez pierwsze pięć minut.<br>
+                Potem pojawił się pomysł. Za nim drugi.<br>
+                Potem ktoś powiedział: „A co ci szkodzi?”<br>
+                I właściwie od tego momentu rozsądek mógł już spokojnie wrócić do domu.<br>
+                Nie wiem, dokąd to prowadzi. Ale przyznaję — początek ma bardzo miły.
+            </p>
+            <div style="text-align: center; color: rgba(255,255,255,0.2); margin: 30px 0; font-size: 0.9rem;">✦ ✦ ✦</div>
+        </div>
+
+        <!-- Niezaplanowanie -->
+        <div class="poem-item" data-category="cienie" style="display: none;">
+            <p style="text-align: center; font-style: italic; color: var(--accent-gold); margin-bottom: 40px; line-height: 1.8;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 10px;">„Niezaplanowanie”</strong>
+                Lubię, kiedy dzień nie trzyma się scenariusza.<br>
+                Kiedy kawa stygnie, bo rozmowa okazuje się ciekawsza.<br>
+                Kiedy spacer kończy się gdzie indziej.<br>
+                Kiedy „na chwilę” zamienia się w kilka godzin.<br>
+                Bo może życie nie zawsze powinno być dobrze zaplanowane.<br>
+                Czasami powinno mieć trochę miejsca na przypadek.
+            </p>
+            <div style="text-align: center; color: rgba(255,255,255,0.2); margin: 30px 0; font-size: 0.9rem;">✦ ✦ ✦</div>
+        </div>
+
+        <!-- Niepoważnie -->
+        <div class="poem-item" data-category="cienie" style="display: none;">
+            <p style="text-align: center; font-style: italic; color: var(--accent-gold); margin-bottom: 40px; line-height: 1.8;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 10px;">„Niepoważnie”</strong>
+                Są takie dni, kiedy człowiek ma ochotę potraktować życie trochę mniej poważnie.<br>
+                Założyć uśmiech bez szczególnego powodu.<br>
+                Pójść tam, gdzie nie trzeba.<br>
+                Powiedzieć „a co mi tam”.<br>
+                I przez kilka godzin nie zastanawiać się, czy to wszystko ma jakiś sens.<br>
+                Nie musi. Dzisiaj ma być miło.
+            </p>
+            <div style="text-align: center; color: rgba(255,255,255,0.2); margin: 30px 0; font-size: 0.9rem;">✦ ✦ ✦</div>
+        </div>
+
+
+        <!-- ===== 2. NIEDOMÓWIENIA ===== -->
+
+        <!-- Gdzieś -->
+        <div class="poem-item" data-category="niedomowienia" style="display: none;">
+            <p style="text-align: center; font-style: italic; color: var(--accent-gold); margin-bottom: 40px; line-height: 1.8;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 10px;">„Gdzieś”</strong>
+                Nie musisz być blisko.<br>
+                Wystarczy mi świadomość, że gdzieś jesteś.<br>
+                Że istnieje miejsce, w którym w tej samej chwili patrzysz na swój kawałek świata.<br>
+                Nic więcej.<br>
+                Dziwne, jak wiele może znaczyć czyjeś istnienie, kiedy nie oczekujesz od niego ani słowa.
+            </p>
+            <div style="text-align: center; color: rgba(255,255,255,0.2); margin: 30px 0; font-size: 0.9rem;">✦ ✦ ✦</div>
+        </div>
+
+        <!-- Język bez słów -->
+        <div class="poem-item" data-category="niedomowienia" style="display: none;">
+            <p style="text-align: center; font-style: italic; color: var(--accent-gold); margin-bottom: 40px; line-height: 1.8;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 10px;">„Język bez słów”</strong>
+                Lubię słuchać. Nie słów.<br>
+                Słowa potrafią nauczyć się kłamać.<br>
+                Wolę spojrzenia, które zatrzymują się odrobinę za długo.<br>
+                Gesty, które mówią więcej niż powinny.<br>
+                Dłonie, które zdradzają to, czego usta jeszcze pilnują.<br>
+                Lubię słuchać tego, co dzieje się pomiędzy słowami.<br>
+                Tam człowiek jest najbardziej prawdziwy.<br>
+                Bo dusza nie zawsze mówi. Czasami tylko przestaje się ukrywać.
+            </p>
+            <div style="text-align: center; color: rgba(255,255,255,0.2); margin: 30px 0; font-size: 0.9rem;">✦ ✦ ✦</div>
+        </div>
+
+        <!-- Niemal -->
+        <div class="poem-item" data-category="niedomowienia" style="display: none;">
+            <p style="text-align: center; font-style: italic; color: var(--accent-gold); margin-bottom: 40px; line-height: 1.8;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 10px;">„Niemal”</strong>
+                Prawie powiedziałam. Prawie zostałam. Prawie uwierzyłam.<br>
+                Dziwne słowo — „prawie”.<br>
+                Potrafi przez lata udawać historię, która nigdy się nie wydarzyła.
+            </p>
+            <div style="text-align: center; color: rgba(255,255,255,0.2); margin: 30px 0; font-size: 0.9rem;">✦ ✦ ✦</div>
+        </div>
+
+        <!-- Bez pamięci -->
+        <div class="poem-item" data-category="niedomowienia" style="display: none;">
+            <p style="text-align: center; font-style: italic; color: var(--accent-gold); margin-bottom: 40px; line-height: 1.8;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 10px;">„Bez pamięci”</strong>
+                Nie pytaj, czy to wydarzyło się naprawdę.<br>
+                Wiersz nie ma obowiązku pamiętać.<br>
+                Nie jest pamiętnikiem, spowiedzią ani zeznaniem.<br>
+                Czasami bierze czyjeś spojrzenie, cudze słowo, jakiś wieczór i splata z nich historię, która nigdy się nie wydarzyła.<br>
+                Dlatego nie szukaj mnie między wersami.<br>
+                Możesz znaleźć tam siebie. I to już powinno wystarczyć.
+            </p>
+            <div style="text-align: center; color: rgba(255,255,255,0.2); margin: 30px 0; font-size: 0.9rem;">✦ ✦ ✦</div>
+        </div>
+
+
+        <!-- ===== 3. CZAS I PAMIĘĆ ===== -->
+
+        <!-- Muzeum rzeczy nieważnych -->
+        <div class="poem-item" data-category="czas" style="display: none;">
+            <p style="text-align: center; font-style: italic; color: var(--accent-gold); margin-bottom: 40px; line-height: 1.8;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 10px;">„Muzeum rzeczy nieważnych”</strong>
+                Chciałbym kiedyś otworzyć takie muzeum.<br>
+                Bez wielkich dzieł.<br>
+                Tylko rzeczy, które nikomu nie wydawały się ważne.<br>
+                Paragon z tamtego dnia. Pęknięty guzik. Kartka z jednym słowem. Bilet autobusowy. Kamień znaleziony na drodze.<br>
+                Przy każdej rzeczy krótki opis:<br>
+                <em>„Wtedy jeszcze nie wiedziałam.”</em><br>
+                Może właśnie dlatego warto byłoby tam wejść.<br>
+                Żeby zobaczyć, ile razy życie próbowało nam powiedzieć, że właśnie trwa.
+            </p>
+            <div style="text-align: center; color: rgba(255,255,255,0.2); margin: 30px 0; font-size: 0.9rem;">✦ ✦ ✦</div>
+        </div>
+
+        <!-- Nie wszystko na teraz (TEN JEST DOMYŚLNIE WIDOCZNY) -->
+        <div class="poem-item" data-category="czas" style="display: block;">
+            <p style="text-align: center; font-style: italic; color: var(--accent-gold); margin-bottom: 40px; line-height: 1.8;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 10px;">„Nie wszystko na teraz”</strong>
+                Zostawiłam dziś niedokończoną książkę, zimną herbatę i kilka myśli bez puenty.<br>
+                Nic się nie stało. Świat nie upomniał się o zakończenie.<br>
+                Zawsze wierzyliśmy, że wszystko trzeba domknąć.<br>
+                A czasami trzeba pozwolić czemuś zostać niedokończonym.<br>
+                Dać sobie rok. Dwa. Trzy. A nawet cztery.<br>
+                Nie wszystko dojrzewa wtedy, kiedy tego potrzebujemy.<br>
+                Niektóre rzeczy potrzebują czasu, żebyśmy to my stali się gotowi je zrozumieć.
+            </p>
+            <div style="text-align: center; color: rgba(255,255,255,0.2); margin: 30px 0; font-size: 0.9rem;">✦ ✦ ✦</div>
+        </div>
+
+        <!-- Nie zapisałam tego lata -->
+        <div class="poem-item" data-category="czas" style="display: none;">
+            <p style="text-align: center; font-style: italic; color: var(--accent-gold); margin-bottom: 40px; line-height: 1.8;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 10px;">„Nie zapisałam tego lata”</strong>
+                Nie zapisałam wszystkich dni.<br>
+                Nie pamiętam każdego poranka, każdej rozmowy, każdego miejsca.<br>
+                I dobrze.<br>
+                Nie wszystko musi zostać w pamięci.<br>
+                Niektóre chwile wystarczy przeżyć tak naprawdę, żeby potem nie potrzebować dowodu, że były.<br><br>
+                Ostatni wieczór lata... Myślę, że może najpiękniejsze w tym wszystkim jest to, że jeszcze nie wiem, co będę pamiętać.
+            </p>
+            <div style="text-align: center; color: rgba(255,255,255,0.2); margin: 30px 0; font-size: 0.9rem;">✦ ✦ ✦</div>
+        </div>
+
+        <!-- To już było -->
+        <div class="poem-item" data-category="czas" style="display: none;">
+            <p style="text-align: center; font-style: italic; color: var(--accent-gold); margin-bottom: 40px; line-height: 1.8;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 10px;">„To już było”</strong>
+                Nie odkładaj szczęścia na później.<br>
+                Na dzień, kiedy będziesz mieć więcej czasu.<br>
+                Na moment, kiedy wszystko wreszcie się ułoży.<br>
+                Na tę rozmowę, na którą „jeszcze przyjdzie pora”.<br>
+                Życie nie lubi czekać na odpowiedni moment. Przychodzi w zwyczajny ranek.<br>
+                W kubku postawionym trochę za blisko krawędzi. W śmiechu dobiegającym z drugiego pokoju. W wiadomości, na którą nie czekałaś. W czyjejś dłoni opartej na stole.<br>
+                W chwili, która nie wygląda jak początek czegokolwiek ważnego.<br>
+                Dlatego nie przechodź obok swojego życia tak szybko.<br>
+                Bo pewnego dnia możesz zatęsknić za tym porankiem. Za tym światłem. Za tym spokojem. Za sobą z tamtej chwili.<br>
+                I wtedy zrozumiesz, że to, czego całe życie szukałaś, nie miało przyjść. To już było.
+            </p>
+            <div style="text-align: center; color: rgba(255,255,255,0.2); margin: 30px 0; font-size: 0.9rem;">✦ ✦ ✦</div>
+        </div>
+
+        <!-- W imię deszczu -->
+        <div class="poem-item" data-category="czas" style="display: none;">
+            <p style="text-align: center; font-style: italic; color: var(--accent-gold); margin-bottom: 40px; line-height: 1.8;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 10px;">„W imię deszczu”</strong>
+                W imię deszczu wybaczam dziś tym wszystkim rzeczom, które nie wydarzyły się tak, jak chciałam.<br>
+                Niech sobie będą. Niedokończone rozmowy. Spóźnione słowa. Drzwi, których nie otworzyłam. Te, które zamknęłam. Drogi, których nie wybrałam.<br>
+                Przez lata myślałam, że życie składa się z tego, co zdążyliśmy przeżyć.<br>
+                Dzisiaj myślę, że również z tego, czego nie zdążyliśmy.<br>
+                Deszcz pada. A ja pierwszy raz nie próbuję liczyć strat.
+            </p>
+            <div style="text-align: center; color: rgba(255,255,255,0.2); margin: 30px 0; font-size: 0.9rem;">✦ ✦ ✦</div>
+        </div>
+
+        <!-- Pierwszy chłodniejszy wieczór -->
+        <div class="poem-item" data-category="czas" style="display: none;">
+            <p style="text-align: center; font-style: italic; color: var(--accent-gold); margin-bottom: 40px; line-height: 1.8;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 10px;">„Pierwszy chłodniejszy wieczór”</strong>
+                Dzisiaj po raz pierwszy zamknęłam okno przed snem.<br>
+                I pomyślałam, że są rzeczy, które robi się dokładnie tak samo.<br>
+                Najpierw zostawiamy je otwarte trochę za długo.<br>
+                Wpada przez nie czyjś głos, czyjś zapach, kilka wspomnień i myśl, że może jeszcze nie trzeba zamykać.<br>
+                A potem przychodzi wieczór, który wie lepiej. I zamykamy.<br>
+                Nie z gniewu. Nie dlatego, że już nic nie czujemy.<br>
+                Tylko dlatego, że wreszcie rozumiemy, że nie każda przestrzeń musi być otwarta.<br>
+                Niektóre są tylko miejscem, przez które ucieka ciepło.<br>
+                I chyba właśnie dlatego lubię wrzesień.<br>
+                Bo przypomina mi, że można coś zamknąć bez trzaskania. Cicho. Prawie czule. I nadal zostawić światło.
+            </p>
+            <div style="text-align: center; color: rgba(255,255,255,0.2); margin: 30px 0; font-size: 0.9rem;">✦ ✦ ✦</div>
+        </div>
+
+        <!-- Wrzesień -->
+        <div class="poem-item" data-category="czas" style="display: none;">
+            <p style="text-align: center; font-style: italic; color: var(--accent-gold); margin-bottom: 40px; line-height: 1.8;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 10px;">„Wrzesień”</strong>
+                Wrzesień ma dziwną właściwość.<br>
+                Nic jeszcze się nie kończy, a jednak zaczynamy żegnać lato.<br>
+                Trochę wcześniej wracamy do domu. Trochę dłużej patrzymy przez okno.<br>
+                I nagle przypominamy sobie o rzeczach, które miały poczekać.<br>
+                O telefonie, którego nie wykonaliśmy.<br>
+                O słowie, którego nie powiedzieliśmy.<br>
+                O kimś, kogo mieliśmy jeszcze kiedyś spotkać.<br>
+                „Kiedyś” jest dziwnym słowem. Brzmi jak obietnica, dopóki nie zrozumieć, że czasami jest tylko inną nazwą dla rzeczy, których już nie zdążymy.<br>
+                Dlatego dzisiaj niczego nie odkładam.<br>
+                Nie mówię: „jeszcze będzie czas”.<br>
+                Bo może właśnie ta chwila, tak zwyczajna, tak niepozorna, jest jedną z tych, za którymi pewnego września będziemy tęsknić.
+            </p>
+            <div style="text-align: center; color: rgba(255,255,255,0.2); margin: 30px 0; font-size: 0.9rem;">✦ ✦ ✦</div>
+        </div>
+
+        <!-- Pewnego dnia -->
+        <div class="poem-item" data-category="czas" style="display: none;">
+            <p style="text-align: center; font-style: italic; color: var(--accent-gold); margin-bottom: 40px; line-height: 1.8;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 10px;">„Pewnego dnia”</strong>
+                Pewnego dnia zrozumiesz,<br>
+                że życie nie wydarzyło się w tych wielkich chwilach, na które tak długo czekałaś.<br>
+                Wydarzyło się pomiędzy nimi.<br>
+                W poranku, który niczym się nie wyróżniał.<br>
+                W rozmowie, która miała trwać jeszcze pięć minut.<br>
+                W czyimś spojrzeniu, które wtedy wydawało się przypadkowe.<br>
+                W śmiechu, którego nie zapisałaś w pamięci.<br>
+                I może właśnie dlatego tak często tęsknimy za przeszłością.<br>
+                Nie za tym, co było wielkie.<br>
+                Tylko za tym, czego wtedy nie wiedzieliśmy, że nie dostaniemy drugi raz.
+            </p>
+            <div style="text-align: center; color: rgba(255,255,255,0.2); margin: 30px 0; font-size: 0.9rem;">✦ ✦ ✦</div>
+        </div>
+
+        <!-- Pomiędzy wczoraj a dzisiaj -->
+        <div class="poem-item" data-category="czas" style="display: none;">
+            <p style="text-align: center; font-style: italic; color: var(--accent-gold); margin-bottom: 40px; line-height: 1.8;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 10px;">„Pomiędzy wczoraj a dzisiaj”</strong>
+                Nie zabieraj wczoraj do łóżka.<br>
+                I nie wpuszczaj jutra za wcześnie.<br>
+                Zostaw je za drzwiami.<br>
+                Dziś rano masz tylko siebie — zaspane myśli, niedopitą kawę i kilka rzeczy, których jeszcze nie powiedziałaś.<br>
+                To wystarczy.<br>
+                Nie każde życie musi od razu wiedzieć, dokąd zmierza.<br>
+                Czasami wystarczy przestać iść tam, gdzie od dawna nie jest nam po drodze.
+            </p>
+            <div style="text-align: center; color: rgba(255,255,255,0.2); margin: 30px 0; font-size: 0.9rem;">✦ ✦ ✦</div>
+        </div>
+
+
+        <!-- ===== 4. NOCNE PRAGNIENIA ===== -->
+
+        <!-- Nie będę grzeczna -->
+        <div class="poem-item" data-category="pragnienia" style="display: none;">
+            <p style="text-align: center; font-style: italic; color: var(--accent-gold); margin-bottom: 40px; line-height: 1.8;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 10px;">„Nie będę grzeczna”</strong>
+                Nie dzisiaj.<br>
+                Dzisiaj nie będę rozsądna, cierpliwa ani przewidywalna.<br>
+                Nie będę udawać, że nie widzę tego spojrzenia.<br>
+                Nie odwrócę głowy, kiedy podejdziesz bliżej.<br>
+                Nie powiem „nie”, jeśli jedynym powodem miałoby być to, że tak wypada.<br>
+                Dzisiaj pozwolę sobie chcieć.<br>
+                A jutro? Jutro znowu mogę być grzeczna.
+            </p>
+            <div style="text-align: center; color: rgba(255,255,255,0.2); margin: 30px 0; font-size: 0.9rem;">✦ ✦ ✦</div>
+        </div>
+
+        <!-- Nie patrz tak -->
+        <div class="poem-item" data-category="pragnienia" style="display: none;">
+            <p style="text-align: center; font-style: italic; color: var(--accent-gold); margin-bottom: 40px; line-height: 1.8;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 10px;">„Nie patrz tak”</strong>
+                Nie patrz tak.<br>
+                Bo jeszcze uwierzę,<br>
+                że można być blisko bez obietnic,<br>
+                że można milczeć i zostać zrozumianą,<br>
+                że jedno spojrzenie potrafi powiedzieć więcej niż wszystkie rozmowy, których nigdy nie odbyliśmy.<br>
+                Nie patrz tak.<br>
+                Nie dlatego, że nie chcę.<br>
+                Tylko dlatego, że mogę chcieć za bardzo.
+            </p>
+            <div style="text-align: center; color: rgba(255,255,255,0.2); margin: 30px 0; font-size: 0.9rem;">✦ ✦ ✦</div>
+        </div>
+
+        <!-- Granica -->
+        <div class="poem-item" data-category="pragnienia" style="display: none;">
+            <p style="text-align: center; font-style: italic; color: var(--accent-gold); margin-bottom: 40px; line-height: 1.8;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 10px;">„Granica”</strong>
+                Najbardziej lubię ten moment,<br>
+                kiedy jeszcze możemy się wycofać.<br>
+                Jedno słowo mogłoby wszystko zakończyć.<br>
+                Jedno spojrzenie — wszystko rozpocząć.<br>
+                I właśnie wtedy najtrudniej jest udawać rozsądek.<br>
+                Bo czasami granica nie stoi między „wolno” i „nie wolno”.<br>
+                Stoi między „chcę” a „jeszcze nie”.
+            </p>
+            <div style="text-align: center; color: rgba(255,255,255,0.2); margin: 30px 0; font-size: 0.9rem;">✦ ✦ ✦</div>
+        </div>
+
+        <!-- Nie dotykaj -->
+        <div class="poem-item" data-category="pragnienia" style="display: none;">
+            <p style="text-align: center; font-style: italic; color: var(--accent-gold); margin-bottom: 40px; line-height: 1.8;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 10px;">„Nie dotykaj”</strong>
+                Nie dotykaj mnie jeszcze.<br>
+                Niech najpierw spojrzenie zrobi to, czego dłonie jeszcze nie powinny.<br>
+                Niech cisza powie za nas to, co rozsądek każe przemilczeć.<br>
+                Bo czasami najbardziej zmysłowa chwila to ta, w której nic się jeszcze nie wydarzyło.
+            </p>
+            <div style="text-align: center; color: rgba(255,255,255,0.2); margin: 30px 0; font-size: 0.9rem;">✦ ✦ ✦</div>
+        </div>
+
+        <!-- Po cichu -->
+        <div class="poem-item" data-category="pragnienia" style="display: none;">
+            <p style="text-align: center; font-style: italic; color: var(--accent-gold); margin-bottom: 30px; line-height: 1.8;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 10px;">„Po cichu”</strong>
+                Nie mów nic.<br>
+                Noc i tak wie o nas więcej niż słowa.<br>
+                Podejdź bliżej.<br>
+                Tak, żebym mogła pomylić Twój oddech z własnym.<br>
+                Nie obiecuj mi jutra.<br>
+                Daj mi tę chwilę, w której świat przestaje istnieć między jednym a drugim oddechem.<br>
+                Resztę zostawmy nocy.
+            </p>
+            <div style="text-align: center; color: rgba(255,255,255,0.2); margin: 30px 0; font-size: 0.9rem;">✦ ✦ ✦</div>
+        </div>
+
+
+        <!-- ===== 5. CISZA I PRÓBA ===== -->
+
+        <!-- Zanim odpowiesz -->
+        <div class="poem-item" data-category="cisza" style="display: none;">
+            <p style="text-align: center; font-style: italic; color: var(--accent-gold); margin-bottom: 40px; line-height: 1.8;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 10px;">„Zanim odpowiesz”</strong>
+                Zanim odpowiesz, pomyśl, czy naprawdę chcesz coś wyjaśnić,<br>
+                czy tylko nie lubisz, kiedy ktoś nie rozumie Ciebie tak, jak chciałbyś być rozumiany.<br>
+                To nie zawsze jest ta sama potrzeba.
+            </p>
+            <div style="text-align: center; color: rgba(255,255,255,0.2); margin: 30px 0; font-size: 0.9rem;">✦ ✦ ✦</div>
+        </div>
+
+        <!-- Nie trzeba pytać -->
+        <div class="poem-item" data-category="cisza" style="display: none;">
+            <p style="text-align: center; font-style: italic; color: var(--accent-gold); margin-bottom: 40px; line-height: 1.8;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 10px;">„Nie trzeba pytać”</strong>
+                Nie pytaj, czy boli. Posłuchaj, jak mówi o czymś zupełnie innym.<br>
+                Nie pytaj, czy tęskni. Zobacz, przy czym nagle milknie.<br>
+                Nie pytaj, kim jest. Zobacz, co robi, kiedy nikt nie patrzy.
+            </p>
+            <div style="text-align: center; color: rgba(255,255,255,0.2); margin: 30px 0; font-size: 0.9rem;">✦ ✦ ✦</div>
+        </div>
+
+        <!-- Nie wiem, co widziałam -->
+        <div class="poem-item" data-category="cisza" style="display: none;">
+            <p style="text-align: center; font-style: italic; color: var(--accent-gold); margin-bottom: 40px; line-height: 1.8;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 10px;">„Nie wiem, co widziałam”</strong>
+                Przez chwilę patrzyłam na człowieka i pomyślałam, że można znać czyjś uśmiech, a nie znać jego smutku.<br>
+                Można znać głos, a nie znać ciszy.<br>
+                Można znać czyjeś „jestem”, nie wiedząc, jak wiele razy musiał powiedzieć sobie „dam radę”, zanim naprawdę uwierzył.
+            </p>
+            <div style="text-align: center; color: rgba(255,255,255,0.2); margin: 30px 0; font-size: 0.9rem;">✦ ✦ ✦</div>
+        </div>
+
+        <!-- Nie mów mi -->
+        <div class="poem-item" data-category="cisza" style="display: none;">
+            <p style="text-align: center; font-style: italic; color: var(--accent-gold); margin-bottom: 40px; line-height: 1.8;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 10px;">„Nie mów mi”</strong>
+                Nie mów mi, jaki jesteś.<br>
+                Pokaż mi, jak traktujesz to, czego nie musisz szanować.<br>
+                Jak słuchasz, kiedy nikt nie słucha ciebie.<br>
+                Jak zostajesz, kiedy możesz odejść.<br>
+                Jak milczysz, kiedy łatwiej byłoby skłamać.<br>
+                Nie mów mi.<br>
+                Człowieka najłatwiej poznać tam, gdzie niczego nie musi udowadniać.
+            </p>
+            <div style="text-align: center; color: rgba(255,255,255,0.2); margin: 30px 0; font-size: 0.9rem;">✦ ✦ ✦</div>
+        </div>
+
+        <!-- Nie szukaj -->
+        <div class="poem-item" data-category="cisza" style="display: none;">
+            <p style="text-align: center; font-style: italic; color: var(--accent-gold); margin-bottom: 40px; line-height: 1.8;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 10px;">„Nie szukaj”</strong>
+                Nie szukaj dziś znaków.<br>
+                Nie pytaj świata, dokąd prowadzi.<br>
+                Nie próbuj odgadnąć zakończeń historii, które dopiero się zaczynają.<br>
+                Są rzeczy, które muszą pozostać niewiadome, żeby mogły nas zaskoczyć.<br>
+                Więc idź.<br>
+                Bez pewności. Bez planu na wszystko.<br>
+                Czasami najpiękniejsze rozdziały zaczynają się wtedy, kiedy przestajemy czytać ostatnią stronę przed pierwszą.
+            </p>
+            <div style="text-align: center; color: rgba(255,255,255,0.2); margin: 30px 0; font-size: 0.9rem;">✦ ✦ ✦</div>
+        </div>
+
+    </div>
+
+    <!-- PRZYCISK "WIĘCEJ WIERSZY" -->
+    <div style="text-align: center; margin-top: 30px; margin-bottom: 50px;" id="load-more-container">
+        <button onclick="toggleAllPoems()" id="load-more-btn" style="background: transparent; color: var(--accent-gold); border: 1px solid var(--accent-gold); padding: 10px 24px; font-family: inherit; font-size: 0.9rem; cursor: pointer; letter-spacing: 1px; transition: all 0.3s;">Więcej wierszy</button>
+    </div>
+
+
+    <!-- SKRYPT OBSŁUGUJĄCY FILTROWANIE ZAKŁADEK I ROZWIJANIE -->
+    <script>
+        let allExpanded = false;
+
+        function filterPoems(category, clickedTab) {
+            const poems = document.querySelectorAll('.poem-item');
+            const tabs = document.querySelectorAll('.poem-tab');
+            const loadMoreContainer = document.getElementById('load-more-container');
+
+            tabs.forEach(tab => {
+                tab.style.background = 'transparent';
+                tab.style.color = 'var(--accent-gold)';
+                tab.classList.remove('active-tab');
+            });
+            
+            clickedTab.style.background = 'var(--accent-gold)';
+            clickedTab.style.color = '#111';
+            clickedTab.classList.add('active-tab');
+
+            // Jeśli kliknięto konkretną kategorię inną niż 'all', pokazujemy wszystkie z tej kategorii i chowamy przycisk "Więcej wierszy"
+            if (category !== 'all') {
+                allExpanded = false;
+                document.getElementById('load-more-btn').innerText = 'Więcej wierszy';
+                loadMoreContainer.style.display = 'none';
+
+                poems.forEach(poem => {
+                    if (poem.getAttribute('data-category') === category) {
+                        poem.style.display = 'block';
+                    } else {
+                        poem.style.display = 'none';
+                    }
+                });
+            } else {
+                // Jeśli kliknięto zakładkę "Wszystkie", wracamy do trybu: tylko jeden wiersz + przycisk
+                loadMoreContainer.style.display = 'block';
+                allExpanded = false;
+                document.getElementById('load-more-btn').innerText = 'Więcej wierszy';
+
+                poems.forEach(poem => {
+                    poem.style.display = 'none';
+                });
+                // Pokaż domyślny wiersz
+                const defaultPoem = document.querySelector('[data-category="czas"]'); // "Nie wszystko na teraz"
+                if(defaultPoem) defaultPoem.style.display = 'block';
+            }
+        }
+
+        function toggleAllPoems() {
+            const poems = document.querySelectorAll('.poem-item');
+            const btn = document.getElementById('load-more-btn');
+            
+            allExpanded = !allExpanded;
+
+            if (allExpanded) {
+                // Pokaż absolutnie wszystkie wiersze
+                poems.forEach(poem => {
+                    poem.style.display = 'block';
+                });
+                btn.innerText = 'Mniej wierszy';
+            } else {
+                // Zwiń z powrotem do samego wiersza domyślnego
+                poems.forEach(poem => {
+                    poem.style.display = 'none';
+                });
+                const defaultPoem = document.querySelector('[data-category="czas"]');
+                if(defaultPoem) defaultPoem.style.display = 'block';
+                btn.innerText = 'Więcej wierszy';
+                
+                // Płynny powrót wzroku na górę sekcji wierszy, żeby użytkownik nie zgubił się po zwinięciu
+                btn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+
+    </script>
+        <!-- SEKCJA: NA DŁUŻSZĄ CHWILĘ (POWIEŚĆ) -->
+        <div class="card" id="chwila" style="text-align: center;">
+            <h2>Na dłuższą chwilę...</h2>
+            <p><em>Usiądź wygodniej, otul się miękkim kocem i pozwól porwać się opowieściom, które rodzą się powoli, w chwili zapomnienia...</em></p>
+            
+            <!-- Zapowiedź książki: Pokój, którego nie było -->
+            <div style="margin-top: 30px; border: 1px solid rgba(212, 175, 55, 0.3); padding: 25px; border-radius: 8px; background: rgba(0,0,0,0.2);">
+                <img src="pokoj-ktorego-nie-bylo-miniatura-1.png" alt="Pokój, którego nie było - Rozdział I" style="width: 100%; max-width: 320px; height: auto; border-radius: 6px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                
+                <h3 style="color: var(--accent-gold); font-size: 1.3rem; margin-bottom: 10px; font-style: italic;">Pokój, którego nie było</h3>
+                <p style="font-size: 0.95rem; color: #ddd; margin-bottom: 15px;"><strong>Rozdział I: „Trzy razy”</strong></p>
+                <p style="font-size: 0.9rem; color: #bbb; font-style: italic; margin-bottom: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    „Nie każdy, kto puka, chce wejść...” Lena Wolska wprowadza się do nowego mieszkania, nie wiedząc, że ściany skrywają sekrety, których nie da się tak łatwo zamknąć na klucz.
+                </p>
+                
+                <!-- Przycisk prowadzący do treści rozdziału -->
+                <a href="pokoj-ktorego-nie-bylo-rozdzial-1.html" style="display: inline-block; background: transparent; color: var(--accent-gold); border: 1px solid var(--accent-gold); padding: 10px 24px; font-family: inherit; font-size: 0.9rem; text-decoration: none; letter-spacing: 1px; transition: all 0.3s;" onmouseover="this.style.background='var(--accent-gold)'; this.style.color='#111';" onmouseout="this.style.background='transparent'; this.style.color='var(--accent-gold)';">Czytaj rozdział</a>
+            </div>
+        </div>
+
+        <div class="card" id="radio">
+            <h2>Radio Szepty Moreny</h2>
+            <p>Dźwięki, które wymykają się schematom. Niezależnie od tego, czy płyną z surowych gitar, czy z melancholijnych klawiszy – każda nuta nosi w sobie własną historię.<br>Włącz gramofon i oddaj się w dźwiękom.</p>
+            
+            <div class="vinyl-player-box">
+                <div class="turntable">
+                    <div class="vinyl-record" id="winyl">
+                        <div class="vinyl-label">SZEPTY MORENY</div>
+                    </div>
+                </div>
+                
+                <div class="track-info" id="trackInfo">Gramofon dusz...</div>
+                <audio id="audioPlayer"></audio>
+
+                <div class="radio-controls">
+                    <button class="radio-btn" id="playBtn">Odtwórz</button>
+                    <button class="radio-btn" id="nextBtn">Następny</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" id="kawa">
+            <h2>Napij się ze mną kawy</h2>
+            <p>Wszystkie treści są darmowe, ale jeśli czujesz bliskość tych słów, pary unoszącej się nad filiżanką i nastroju, który tworzę – możesz postawić mi wirtualną kawę.<br>Każdy taki gest to ciepły akompaniament do kolejnych myśli.</p>
+            <div class="coffee-support-box">
+                <p style="font-family: 'Playfair Display', serif; font-style: italic; color: var(--accent-gold); margin-bottom: 5px;">
+                    Drobny gest, który smakuje jak dobrze zaparzona mała czarna...
+                </p>
+                <a href="https://buycoffee.to/morena" target="_blank" class="coffee-btn">☕ Postaw mi kawę na BuyCoffee</a>
+            </div>
+        </div>
+
+    </div>
+
+<!-- Social -->
+    <div style="text-align: center; margin: 30px 0;">
+        <a href="https://www.facebook.com/share/1KmWr7QkRk/" target="_blank" style="color: #ccc; margin: 0 8px; text-decoration: none;">Facebook</a> /
+        <a href="https://www.instagram.com/szeptymoreny?stkn=MW0wajNnNmlqNHBudA==" target="_blank" style="color: #ccc; margin: 0 8px; text-decoration: none;">Instagram</a> /
+        <a href="https://youtube.com/@szeptymoreny?si=rPJKQOdLhz0nod6A" target="_blank" style="color: #ccc; margin: 0 8px; text-decoration: none;">YouTube</a> /
+        <a href="https://www.tiktok.com/@szeptymoreny?_r=1&_t=ZN-9AHyMyWhq2Y" target="_blank" style="color: #ccc; margin: 0 8px; text-decoration: none;">TikTok</a>
+        
+        <!-- LICZNIK ODWIEDZAJĄCYCH -->
+        <div id="visitor-counter-container" style="margin-top: 25px; font-size: 0.8rem; color: rgba(255,255,255,0.4); letter-spacing: 2px; text-transform: uppercase;">
+            Odwiedziny: <span id="visitor-count" style="color: var(--accent-gold);">---</span>
+        </div>
+    </div>
+    <footer>
+
+    <!-- SKRYPT LICZNIKA -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let visits = localStorage.getItem("szepty_moreny_visits");
+            if (!visits) {
+                visits = 1027; // Początkowa baza odwiedzin (możesz zmienić)
+            } else {
+                visits = parseInt(visits) + 1;
+            }
+            localStorage.setItem("szepty_moreny_visits", visits);
+            
+            const counterElement = document.getElementById("visitor-count");
+            if (counterElement) {
+                counterElement.innerText = visits;
+            }
+        });
+    </script>
+
+    <script>
+        function togglePoems() {
+            const morePoems = document.getElementById('more-poems');
+            const btn = document.getElementById('toggle-poems-btn');
+            
+            if (morePoems.style.display === 'none') {
+                morePoems.style.display = 'block';
+                btn.textContent = 'Zwiń wiersze';
+            } else {
+                morePoems.style.display = 'none';
+                btn.textContent = 'Więcej wierszy...';
+            }
+        }
+
+        const rawPlaylist = [
+            { title: "Szepty Moreny — Adios", src: "adios.mp3" },
+            { title: "Szepty Moreny — Córka mroku", src: "corka-mroku.mp3" },
+            { title: "Szepty Moreny — Do snu", src: "do-snu.mp3" },
+            { title: "Szepty Moreny — Drzazga", src: "drzazga.mp3" },
+            { title: "Szepty Moreny — Głód miłości", src: "glod-milosci.mp3" },
+            { title: "Szepty Moreny — Gorzka czekolada", src: "gorzka-czekolada.mp3" },
+            { title: "Szepty Moreny — Iluzja", src: "iluzja.mp3" },
+            { title: "Szepty Moreny — Jak świece", src: "jak-swiece.mp3" },
+            { title: "Szepty Moreny — Kamienny golem", src: "kamienny-golem.mp3" },
+            { title: "Szepty Moreny — Mieliśmy być wspomnieniem", src: "mielismy-byc-wspomnieniem.mp3" },
+            { title: "Szepty Moreny — Modlitwy", src: "modlitwy.mp3" },
+            { title: "Szepty Moreny — Monster", src: "monster.mp3" },
+            { title: "Szepty Moreny — Nie zasłużyliśmy na miłość", src: "nie-zasluzylismy-na-milosc.mp3" },
+            { title: "Szepty Moreny — Papierowy motyl", src: "papierowy-motyl.mp3" },
+            { title: "Szepty Moreny — Pod tym samym niebem", src: "pod-tym-samym-niebem.mp3" },
+            { title: "Szepty Moreny — Pokaż mi swoją miłość", src: "pokaz-mi-swoja-milosc.mp3" },
+            { title: "Szepty Moreny — Strzała amora", src: "strzala-amora.mp3" },
+            { title: "Szepty Moreny — Szczęścia łzy", src: "szczescia-lzy.mp3" },
+            { title: "Szepty Moreny — To tylko sen", src: "to-tylko-sen.mp3" },
+            { title: "Szepty Moreny — Tyle co nic", src: "tyle-co-nic.mp3" },
+            { title: "Szepty Moreny — Tylko ciebie", src: "tylko-ciebie.mp3" },
+            { title: "Szepty Moreny — W ciszy", src: "w-ciszy.mp3" },
+            { title: "Szepty Moreny — We śnie", src: "we-snie.mp3" },
+            { title: "Szepty Moreny — Anioły", src: "anioly.mp3" },
+            { title: "Szepty Moreny — Jesteś snem", src: "jestes-snem1.mp3" },
+            { title: "Szepty Moreny — Fragmenty", src: "fragmenty.mp3" },
+            { title: "Szepty Moreny — We mgle", src: "we-mgle.mp3" },
+            { title: "Szepty Moreny — Pozwól mi odejść", src: "pozwol-mi-odejsc.mp3" },
+            { title: "Szepty Moreny — Wilczy głód", src: "wilczy-glod.mp3" },
+            { title: "Szepty Moreny — Wpełznij", src: "wpelznij.mp3" },
+            { title: "Szepty Moreny — Szanuj czas", src: "szanuj-czas.mp3" },
+            { title: "Szepty Moreny — Żywy trup", src: "zywy-trup.mp3" },
+            { title: "Szepty Moreny — Gościnna dziewczyna", src: "goscinna-dziewczyna.mp3" },
+            { title: "Szepty Moreny — Brudny raj", src: "brudny-raj.mp3" },
+            { title: "Szepty Moreny — List miłosny pisany krwią", src: "list-milosny-pisany-krwia.mp3" },
+            { title: "Szepty Moreny — Zbuntowany anioł", src: "zbuntowany-aniol.mp3" },
+            { title: "Szepty Moreny — Złoty strzał", src: "zloty-strzal.mp3" },
+            { title: "Szepty Moreny — Przychodzą, odchodzą", src: "przychodza-odchodza.mp3" },
+            { title: "Szepty Moreny — Oddam ci", src: "oddam-ci.mp3" },
+            { title: "Szepty Moreny — Nie przytulę wspomnień", src: "nie-przytule-wspomnien.mp3" },
+            { title: "Szepty Moreny — Między nami", src: "miedzy-nami.mp3" },
+            { title: "Szepty Moreny — Marzy mi się", src: "marzy-mi-sie.mp3" },
+            { title: "Szepty Moreny — Zbyt blisko, zbyt daleko", src: "zbyt-blisko-zbyt-daleko.mp3" },
+            { title: "Szepty Moreny — Lepsze życie", src: "lepsze-zycie.mp3" },
+            { title: "Szepty Moreny — Jestem tu bez ciebie", src: "jestem-tu-bez-ciebie.mp3" },
+            { title: "Szepty Moreny — W innym świecie", src: "w-innym-swiecie.mp3" },
+            { title: "Szepty Moreny — W prezencie", src: "w-prezencie.mp3" },
+            { title: "Szepty Moreny — W swoim niebie", src: "w-swoim-niebie.mp3" },
+            { title: "Szepty Moreny — Zabierz mnie tam", src: "zabierz-mnie-tam.mp3" },
+            { title: "Szepty Moreny — Zepsute owoce", src: "zepsute-owoce.mp3" },
+            { title: "Szepty Moreny — Zimno mi", src: "zimno-mi.mp3" },
+        ];
+
+       // Funkcja losująca (Fisher-Yates shuffle) do przetasowania całej playlisty przy wejściu
+        function shuffleArray(array) {
+            let shuffled = [...array];
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+            return shuffled;
+        }
+
+        const playlist = shuffleArray(rawPlaylist);
+
+        const audio = document.getElementById('audioPlayer');
+        const playBtn = document.getElementById('playBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const trackInfo = document.getElementById('trackInfo');
+        const winyl = document.getElementById('winyl');
+
+      let currentIndex = 0;
+
+        function loadTrack(index) {
+            audio.src = playlist[index].src;
+            trackInfo.textContent = playlist[index].title;
+        }
+
+        function playTrack() {
+            audio.play().then(() => {
+                playBtn.textContent = 'Pauza';
+                winyl.classList.add('rotating');
+                
+                // Kluczowe dla telefonu: informujemy system, że sesja medialna jest aktywna
+                if ('mediaSession' in navigator) {
+                    navigator.mediaSession.playbackState = 'playing';
+                    navigator.mediaSession.metadata = new MediaMetadata({
+                        title: playlist[currentIndex].title,
+                        artist: 'Szepty Moreny',
+                        album: 'Radio / Winyl'
+                    });
+                }
+            }).catch(error => {
+                console.log("Autoplay zablokowany lub błąd:", error);
+                playBtn.textContent = 'Odtwórz';
+                winyl.classList.remove('rotating');
+            });
+        }
+
+        function pauseTrack() {
+            audio.pause();
+            playBtn.textContent = 'Odtwórz';
+            winyl.classList.remove('rotating');
+            
+            if ('mediaSession' in navigator) {
+                navigator.mediaSession.playbackState = 'paused';
+            }
+        }
+
+        playBtn.addEventListener('click', () => {
+            if (audio.paused) {
+                if (!audio.src || audio.src === window.location.href) {
+                    loadTrack(currentIndex);
+                }
+                playTrack();
+            } else {
+                pauseTrack();
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % playlist.length;
+            loadTrack(currentIndex);
+            playTrack();
+        });
+
+        // Płynne przechodzenie między utworami
+        audio.addEventListener('ended', () => {
+            currentIndex = (currentIndex + 1) % playlist.length;
+            audio.src = playlist[currentIndex].src;
+            trackInfo.textContent = playlist[currentIndex].title;
+            
+            setTimeout(() => {
+                playTrack();
+            }, 600);
+        });
+
+        // --- SPRYTNY STRAŻNIK TLA (WAP / WakeLock / Heartbeat) ---
+        // Zapobiega uśpieniu radia przez system telefonu po kilku utworach
+        if ('mediaSession' in navigator) {
+            navigator.mediaSession.setActionHandler('play', () => { playTrack(); });
+            navigator.mediaSession.setActionHandler('pause', () => { pauseTrack(); });
+            navigator.mediaSession.setActionHandler('nexttrack', () => {
+                currentIndex = (currentIndex + 1) % playlist.length;
+                loadTrack(currentIndex);
+                playTrack();
+            });
+        }
+
+        // Wstępne załadowanie losowego utworu na start
+        loadTrack(currentIndex);
+
+        let visits = localStorage.getItem('szepty_visits');
+        if (!visits) {
+            visits = 142;
+        } else {
+            visits = parseInt(visits) + 1;
+        }
+        localStorage.setItem('szepty_visits', visits);
+        const counterEl = document.getElementById('counter');
+        if (counterEl) {
+            counterEl.innerText = visits;
+        }
+    </script>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Szepty Moreny. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+
+</body>
+</html>
