@@ -1075,79 +1075,85 @@
 
 
     <!-- SKRYPT OBSŁUGUJĄCY FILTROWANIE ZAKŁADEK I ROZWIJANIE -->
-    <script>
-        let allExpanded = false;
+<script>
+    let allExpanded = false;
 
-        function filterPoems(category, clickedTab) {
-            const poems = document.querySelectorAll('.poem-item');
-            const tabs = document.querySelectorAll('.poem-tab');
-            const loadMoreContainer = document.getElementById('load-more-container');
+    function showDefaultPoem() {
+        const poems = document.querySelectorAll('.poem-item');
+        poems.forEach(poem => {
+            poem.style.display = 'none';
+        });
 
-            tabs.forEach(tab => {
-                tab.style.background = 'transparent';
-                tab.style.color = 'var(--accent-gold)';
-                tab.classList.remove('active-tab');
-            });
-            
+        // Szukamy konkretnego wiersza "Nie wszystko na teraz"
+        const targetPoem = Array.from(poems).find(poem =>
+            poem.textContent.includes('„Nie wszystko na teraz”')
+        );
+
+        if (targetPoem) {
+            targetPoem.style.display = 'block';
+        } else if (poems.length > 0) {
+            poems[0].style.display = 'block';
+        }
+    }
+
+    function filterPoems(category, clickedTab) {
+        const poems = document.querySelectorAll('.poem-item');
+        const tabs = document.querySelectorAll('.poem-tab');
+        const loadMoreContainer = document.getElementById('load-more-container');
+        const loadMoreBtn = document.getElementById('load-more-btn');
+
+        tabs.forEach(tab => {
+            tab.style.background = 'transparent';
+            tab.style.color = 'var(--accent-gold)';
+            tab.classList.remove('active-tab');
+        });
+
+        if (clickedTab) {
             clickedTab.style.background = 'var(--accent-gold)';
             clickedTab.style.color = '#111';
             clickedTab.classList.add('active-tab');
-
-            // Jeśli kliknięto konkretną kategorię inną niż 'all', pokazujemy wszystkie z tej kategorii i chowamy przycisk "Więcej wierszy"
-            if (category !== 'all') {
-                allExpanded = false;
-                document.getElementById('load-more-btn').innerText = 'Więcej wierszy';
-                loadMoreContainer.style.display = 'none';
-
-                poems.forEach(poem => {
-                    if (poem.getAttribute('data-category') === category) {
-                        poem.style.display = 'block';
-                    } else {
-                        poem.style.display = 'none';
-                    }
-                });
-            } else {
-                // Jeśli kliknięto zakładkę "Wszystkie", wracamy do trybu: tylko jeden wiersz + przycisk
-                loadMoreContainer.style.display = 'block';
-                allExpanded = false;
-                document.getElementById('load-more-btn').innerText = 'Więcej wierszy';
-
-                poems.forEach(poem => {
-                    poem.style.display = 'none';
-                });
-                // Pokaż domyślny wiersz
-                const defaultPoem = document.querySelector('[data-category="czas"]'); // "Nie wszystko na teraz"
-                if(defaultPoem) defaultPoem.style.display = 'block';
-            }
         }
 
-        function toggleAllPoems() {
-            const poems = document.querySelectorAll('.poem-item');
-            const btn = document.getElementById('load-more-btn');
-            
-            allExpanded = !allExpanded;
+        if (category !== 'all') {
+            allExpanded = false;
+            if (loadMoreBtn) loadMoreBtn.innerText = 'Więcej wierszy';
+            if (loadMoreContainer) loadMoreContainer.style.display = 'none';
 
-            if (allExpanded) {
-                // Pokaż absolutnie wszystkie wiersze
-                poems.forEach(poem => {
+            poems.forEach(poem => {
+                if (poem.getAttribute('data-category') === category) {
                     poem.style.display = 'block';
-                });
-                btn.innerText = 'Mniej wierszy';
-            } else {
-                // Zwiń z powrotem do samego wiersza domyślnego
-                poems.forEach(poem => {
+                } else {
                     poem.style.display = 'none';
-                });
-                const defaultPoem = document.querySelector('[data-category="czas"]');
-                if(defaultPoem) defaultPoem.style.display = 'block';
+                }
+            });
+        } else {
+            if (loadMoreContainer) loadMoreContainer.style.display = 'block';
+            allExpanded = false;
+            if (loadMoreBtn) loadMoreBtn.innerText = 'Więcej wierszy';
+            showDefaultPoem();
+        }
+    }
+
+    function toggleAllPoems() {
+        const poems = document.querySelectorAll('.poem-item');
+        const btn = document.getElementById('load-more-btn');
+
+        allExpanded = !allExpanded;
+
+        if (allExpanded) {
+            poems.forEach(poem => {
+                poem.style.display = 'block';
+            });
+            if (btn) btn.innerText = 'Mniej wierszy';
+        } else {
+            showDefaultPoem();
+            if (btn) {
                 btn.innerText = 'Więcej wierszy';
-                
-                // Płynny powrót wzroku na górę sekcji wierszy, żeby użytkownik nie zgubił się po zwinięciu
                 btn.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
         }
-
-    </script>
+    }
+</script>
         <!-- SEKCJA: NA DŁUŻSZĄ CHWILĘ (POWIEŚĆ) -->
         <div class="card" id="chwila" style="text-align: center;">
             <h2>Na dłuższą chwilę...</h2>
