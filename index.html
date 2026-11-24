@@ -458,7 +458,7 @@
         <div class="poem-item" data-category="cienie" style="display: none;">
             <p style="text-align: center; font-style: italic; color: var(--accent-gold); margin-bottom: 40px; line-height: 1.8;">
                 <strong style="display: block; font-size: 1.1rem; margin-bottom: 10px;">„Prawie nic”</strong>
-                Najciekniejsze rzeczy często zaczynają się od prawie nic.<br>
+                Najciekawsze rzeczy często zaczynają się od prawie nic.<br>
                 Jednego zdania. Jednego spojrzenia. Decyzji podjętej bez większego namysłu.<br>
                 Mijają lata i okazuje się, że właśnie ten drobiazg miał swoje dalsze strony.<br>
                 Tylko wtedy jeszcze o nich nie wiedzieliśmy.
@@ -1066,115 +1066,170 @@
                 czy tylko nie lubisz, kiedy ktoś nie rozumie Ciebie tak, jak chciałbyś być rozumiany.<br>
                 To nie zawsze jest ta sama potrzeba.
             </p>
-            <div style="text-align: center; color: rgba(255,255,255,0.2); margin: 30px
+            <div style="text-align: center; color: rgba(255,255,255,0.2); margin: 30px 0; font-size: 0.9rem;">✦ ✦ ✦</div>
+        </div>
+
+        <!-- Nie trzeba pytać -->
+        <div class="poem-item" data-category="cisza" style="display: none;">
+            <p style="text-align: center; font-style: italic; color: var(--accent-gold); margin-bottom: 40px; line-height: 1.8;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 10px;">„Nie trzeba pytać”</strong>
+                Nie pytaj, czy boli. Posłuchaj, jak mówi o czymś zupełnie innym.<br>
+                Nie pytaj, czy tęskni. Zobacz, przy czym nagle milknie.<br>
+                Nie pytaj, kim jest. Zobacz, co robi, kiedy nikt nie patrzy.
+            </p>
+            <div style="text-align: center; color: rgba(255,255,255,0.2); margin: 30px 0; font-size: 0.9rem;">✦ ✦ ✦</div>
+        </div>
+
+        <!-- Nie wiem, co widziałam -->
+        <div class="poem-item" data-category="cisza" style="display: none;">
+            <p style="text-align: center; font-style: italic; color: var(--accent-gold); margin-bottom: 40px; line-height: 1.8;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 10px;">„Nie wiem, co widziałam”</strong>
+                Przez chwilę patrzyłam na człowieka i pomyślałam, że można znać czyjś uśmiech, a nie znać jego smutku.<br>
+                Można znać głos, a nie znać ciszy.<br>
+                Można znać czyjeś „jestem”, nie wiedząc, jak wiele razy musiał powiedzieć sobie „dam radę”, zanim naprawdę uwierzył.
+            </p>
+            <div style="text-align: center; color: rgba(255,255,255,0.2); margin: 30px 0; font-size: 0.9rem;">✦ ✦ ✦</div>
+        </div>
+
+        <!-- Nie mów mi -->
+        <div class="poem-item" data-category="cisza" style="display: none;">
+            <p style="text-align: center; font-style: italic; color: var(--accent-gold); margin-bottom: 40px; line-height: 1.8;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 10px;">„Nie mów mi”</strong>
+                Nie mów mi, jaki jesteś.<br>
+                Pokaż mi, jak traktujesz to, czego nie musisz szanować.<br>
+                Jak słuchasz, kiedy nikt nie słucha ciebie.<br>
+                Jak zostajesz, kiedy możesz odejść.<br>
+                Jak milczysz, kiedy łatwiej byłoby skłamać.<br>
+                Nie mów mi.<br>
+                Człowieka najłatwiej poznać tam, gdzie niczego nie musi udowadniać.
+            </p>
+            <div style="text-align: center; color: rgba(255,255,255,0.2); margin: 30px 0; font-size: 0.9rem;">✦ ✦ ✦</div>
+        </div>
+
+        <!-- Nie szukaj -->
+        <div class="poem-item" data-category="cisza" style="display: none;">
+            <p style="text-align: center; font-style: italic; color: var(--accent-gold); margin-bottom: 40px; line-height: 1.8;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 10px;">„Nie szukaj”</strong>
+                Nie szukaj dziś znaków.<br>
+                Nie pytaj świata, dokąd prowadzi.<br>
+                Nie próbuj odgadnąć zakończeń historii, które dopiero się zaczynają.<br>
+                Są rzeczy, które muszą pozostać niewiadome, żeby mogły nas zaskoczyć.<br>
+                Więc idź.<br>
+                Bez pewności. Bez planu na wszystko.<br>
+                Czasami najpiękniejsze rozdziały zaczynają się wtedy, kiedy przestajemy czytać ostatnią stronę przed pierwszą.
+            </p>
+            <div style="text-align: center; color: rgba(255,255,255,0.2); margin: 30px 0; font-size: 0.9rem;">✦ ✦ ✦</div>
+        </div>
+
+    </div> <!-- KONIEC #poems-container -->
 
     <!-- PRZYCISK "WIĘCEJ WIERSZY" -->
     <div style="text-align: center; margin-top: 30px; margin-bottom: 50px;" id="load-more-container">
         <button onclick="toggleAllPoems()" id="load-more-btn" style="background: transparent; color: var(--accent-gold); border: 1px solid var(--accent-gold); padding: 10px 24px; font-family: inherit; font-size: 0.9rem; cursor: pointer; letter-spacing: 1px; transition: all 0.3s;">Więcej wierszy</button>
     </div>
 
-
     <!-- SKRYPT OBSŁUGUJĄCY FILTROWANIE ZAKŁADEK I ROZWIJANIE -->
-<script>
-    let allExpanded = false;
+    <script>
+        let allExpanded = false;
 
-    function showDefaultPoem() {
-        const poems = document.querySelectorAll('.poem-item');
-        poems.forEach(poem => {
-            poem.style.display = 'none';
-        });
-
-        // Szukamy konkretnego wiersza "Nie wszystko na teraz"
-        const targetPoem = Array.from(poems).find(poem =>
-            poem.textContent.includes('„Nie wszystko na teraz”')
-        );
-
-        if (targetPoem) {
-            targetPoem.style.display = 'block';
-        } else if (poems.length > 0) {
-            poems[0].style.display = 'block';
-        }
-    }
-
-    function filterPoems(category, clickedTab) {
-        const poems = document.querySelectorAll('.poem-item');
-        const tabs = document.querySelectorAll('.poem-tab');
-        const loadMoreContainer = document.getElementById('load-more-container');
-        const loadMoreBtn = document.getElementById('load-more-btn');
-
-        tabs.forEach(tab => {
-            tab.style.background = 'transparent';
-            tab.style.color = 'var(--accent-gold)';
-            tab.classList.remove('active-tab');
-        });
-
-        if (clickedTab) {
-            clickedTab.style.background = 'var(--accent-gold)';
-            clickedTab.style.color = '#111';
-            clickedTab.classList.add('active-tab');
-        }
-
-        if (category !== 'all') {
-            allExpanded = false;
-            if (loadMoreBtn) loadMoreBtn.innerText = 'Więcej wierszy';
-            if (loadMoreContainer) loadMoreContainer.style.display = 'none';
-
+        function showDefaultPoem() {
+            const poems = document.querySelectorAll('.poem-item');
             poems.forEach(poem => {
-                if (poem.getAttribute('data-category') === category) {
-                    poem.style.display = 'block';
-                } else {
-                    poem.style.display = 'none';
-                }
+                poem.style.display = 'none';
             });
-        } else {
-            if (loadMoreContainer) loadMoreContainer.style.display = 'block';
-            allExpanded = false;
-            if (loadMoreBtn) loadMoreBtn.innerText = 'Więcej wierszy';
-            showDefaultPoem();
-        }
-    }
 
-    function toggleAllPoems() {
-        const poems = document.querySelectorAll('.poem-item');
-        const btn = document.getElementById('load-more-btn');
+            // Szukamy konkretnego wiersza "Nie wszystko na teraz"
+            const targetPoem = Array.from(poems).find(poem =>
+                poem.textContent.includes('„Nie wszystko na teraz”')
+            );
 
-        allExpanded = !allExpanded;
-
-        if (allExpanded) {
-            poems.forEach(poem => {
-                poem.style.display = 'block';
-            });
-            if (btn) btn.innerText = 'Mniej wierszy';
-        } else {
-            showDefaultPoem();
-            if (btn) {
-                btn.innerText = 'Więcej wierszy';
-                btn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            if (targetPoem) {
+                targetPoem.style.display = 'block';
+            } else if (poems.length > 0) {
+                poems[0].style.display = 'block';
             }
         }
-    }
-</script>
-        <!-- SEKCJA: NA DŁUŻSZĄ CHWILĘ (POWIEŚĆ) -->
-        <div class="card" id="chwila" style="text-align: center;">
-            <h2>Na dłuższą chwilę...</h2>
-            <p><em>Usiądź wygodniej, otul się miękkim kocem i pozwól porwać się opowieściom, które rodzą się powoli, w chwili zapomnienia...</em></p>
-            
-            <!-- Zapowiedź książki: Pokój, którego nie było -->
-            <div style="margin-top: 30px; border: 1px solid rgba(212, 175, 55, 0.3); padding: 25px; border-radius: 8px; background: rgba(0,0,0,0.2);">
-                <img src="pokoj-ktorego-nie-bylo-miniatura-1.png" alt="Pokój, którego nie było - Rozdział I" style="width: 100%; max-width: 320px; height: auto; border-radius: 6px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
-                
-                <h3 style="color: var(--accent-gold); font-size: 1.3rem; margin-bottom: 10px; font-style: italic;">Pokój, którego nie było</h3>
-                <p style="font-size: 0.95rem; color: #ddd; margin-bottom: 15px;"><strong>Rozdział I: „Trzy razy”</strong></p>
-                <p style="font-size: 0.9rem; color: #bbb; font-style: italic; margin-bottom: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
-                    „Nie każdy, kto puka, chce wejść...” Lena Wolska wprowadza się do nowego mieszkania, nie wiedząc, że ściany skrywają sekrety, których nie da się tak łatwo zamknąć na klucz.
-                </p>
-                
-                <!-- Przycisk prowadzący do treści rozdziału -->
-                <a href="pokoj-ktorego-nie-bylo-rozdzial-1.html" style="display: inline-block; background: transparent; color: var(--accent-gold); border: 1px solid var(--accent-gold); padding: 10px 24px; font-family: inherit; font-size: 0.9rem; text-decoration: none; letter-spacing: 1px; transition: all 0.3s;" onmouseover="this.style.background='var(--accent-gold)'; this.style.color='#111';" onmouseout="this.style.background='transparent'; this.style.color='var(--accent-gold)';">Czytaj rozdział</a>
-            </div>
-        </div>
 
-            <!-- Sekcja Zapowiedzi Albumu - Premiera 31.10.2026 -->
+        function filterPoems(category, clickedTab) {
+            const poems = document.querySelectorAll('.poem-item');
+            const tabs = document.querySelectorAll('.poem-tab');
+            const loadMoreContainer = document.getElementById('load-more-container');
+            const loadMoreBtn = document.getElementById('load-more-btn');
+
+            tabs.forEach(tab => {
+                tab.style.background = 'transparent';
+                tab.style.color = 'var(--accent-gold)';
+                tab.classList.remove('active-tab');
+            });
+
+            if (clickedTab) {
+                clickedTab.style.background = 'var(--accent-gold)';
+                clickedTab.style.color = '#111';
+                clickedTab.classList.add('active-tab');
+            }
+
+            if (category !== 'all') {
+                allExpanded = false;
+                if (loadMoreBtn) loadMoreBtn.innerText = 'Więcej wierszy';
+                if (loadMoreContainer) loadMoreContainer.style.display = 'none';
+
+                poems.forEach(poem => {
+                    if (poem.getAttribute('data-category') === category) {
+                        poem.style.display = 'block';
+                    } else {
+                        poem.style.display = 'none';
+                    }
+                });
+            } else {
+                if (loadMoreContainer) loadMoreContainer.style.display = 'block';
+                allExpanded = false;
+                if (loadMoreBtn) loadMoreBtn.innerText = 'Więcej wierszy';
+                showDefaultPoem();
+            }
+        }
+
+        function toggleAllPoems() {
+            const poems = document.querySelectorAll('.poem-item');
+            const btn = document.getElementById('load-more-btn');
+
+            allExpanded = !allExpanded;
+
+            if (allExpanded) {
+                poems.forEach(poem => {
+                    poem.style.display = 'block';
+                });
+                if (btn) btn.innerText = 'Mniej wierszy';
+            } else {
+                showDefaultPoem();
+                if (btn) {
+                    btn.innerText = 'Więcej wierszy';
+                    btn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+        }
+    </script>
+
+    <!-- SEKCJA: NA DŁUŻSZĄ CHWILĘ (POWIEŚĆ) -->
+    <div class="card" id="chwila" style="text-align: center;">
+        <h2>Na dłuższą chwilę...</h2>
+        <p><em>Usiądź wygodniej, otul się miękkim kocem i pozwól porwać się opowieściom, które rodzą się powoli, w chwili zapomnienia...</em></p>
+
+        <!-- Zapowiedź książki: Pokój, którego nie było -->
+        <div style="margin-top: 30px; border: 1px solid rgba(212, 175, 55, 0.3); padding: 25px; border-radius: 8px; background: rgba(0,0,0,0.2);">
+            <img src="pokoj-ktorego-nie-bylo-miniatura-1.png" alt="Pokój, którego nie było - Rozdział I" style="width: 100%; max-width: 320px; height: auto; border-radius: 6px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+
+            <h3 style="color: var(--accent-gold); font-size: 1.3rem; margin-bottom: 10px; font-style: italic;">Pokój, którego nie było</h3>
+            <p style="font-size: 0.95rem; color: #ddd; margin-bottom: 15px;"><strong>Rozdział I: „Trzy razy”</strong></p>
+            <p style="font-size: 0.9rem; color: #bbb; font-style: italic; margin-bottom: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                „Nie każdy, kto puka, chce wejść...” Lena Wolska wprowadza się do nowego mieszkania, nie wiedząc, że ściany skrywają sekrety, których nie da się tak łatwo zamknąć na klucz.
+            </p>
+
+            <!-- Przycisk prowadzący do treści rozdziału -->
+            <a href="pokoj-ktorego-nie-bylo-rozdzial-1.html" style="display: inline-block; background: transparent; color: var(--accent-gold); border: 1px solid var(--accent-gold); padding: 10px 24px; font-family: inherit; font-size: 0.9rem; text-decoration: none; letter-spacing: 1px; transition: all 0.3s;" onmouseover="this.style.background='var(--accent-gold)'; this.style.color='#111';" onmouseout="this.style.background='transparent'; this.style.color='var(--accent-gold)';">Czytaj rozdział</a>
+        </div>
+    </div>
+
+    <!-- Sekcja Zapowiedzi Albumu - Premiera 31.10.2026 -->
 <section id="album" class="album-teaser" style="text-align: center; padding: 40px 20px; background-color: #0b0b0b; color: #f0f0f0; border-top: 1px solid #222; border-bottom: 1px solid #222; margin-bottom: 30px;">
     <div style="max-width: 600px; margin: 0 auto;">
         <h3 style="font-size: 0.9rem; letter-spacing: 3px; text-transform: uppercase; color: #888; margin-bottom: 10px;">Nadchodzące Wydarzenie</h3>
